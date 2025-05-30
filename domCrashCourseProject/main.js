@@ -3,6 +3,8 @@ var itemList = document.getElementById('items');
 
 //Form submit event
 form.addEventListener('submit', addItem);
+// Delete event
+itemList.addEventListener('click', removeItem);
 
 //Add item
 function addItem(e) {
@@ -31,4 +33,15 @@ function addItem(e) {
 
     //Append button li to list
     itemList.appendChild(li);
+}
+
+//Remove Item
+function removeItem(e){
+    if(e.target.classList.contains('delete')){
+        if(confirm('Are You Sure?')){
+            var li = e.target.parentElement;
+            itemList.removeChild(li);
+        }
+        
+    }
 }
