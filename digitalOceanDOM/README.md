@@ -1,0 +1,5 @@
+# Overview
+The point of this project was to follow along [Tania Rascia's DigitalOcean DOM Tutorials](https://www.digitalocean.com/community/tutorial-series/understanding-the-dom-document-object-model) and create multiple html pages that showcase the abilities of DOM manipulation. In the tutorial we covered topics such as accessing elements through parent-sibling-children nodes, creating new text nodes, making style changes, modifying attributes, and understanding the differences between events and target event listeners.
+
+## Takeaways
+Before this follow-through I had a vague conception of events and targets in particular. I also did not previous understand the difference between event handlers and event listeners, nor why would we prefer the latter. I am happy to have found this resource so I can often refer back to it for a clear distinction whenever I forget.
