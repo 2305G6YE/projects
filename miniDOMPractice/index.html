@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vw;
+        }
+
+        div.container {
+            border: 1px solid grey;
+            padding: 20px
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <div class="container">
+        <button id="color">Click Me to Change Background Color!</button>   
+    </div>
+     <div class="container">
+        <p>Write to display live text</p> 
+        <input id="liveText">
+     </div>
+     <div class="container">
+        <button id="plus">Press to Increase</button>
+        <button id="minus">Press to Decrease</button>
+        <p></p>
+     </div> 
+    </div>
+    
+
+    <script src="hail.js"></script>
+</body>
+</html>
