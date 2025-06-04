@@ -12,6 +12,6 @@ color.addEventListener('click',(e) => {
 // 2nd Segment
 const output = document.querySelector("#output");
 const input = document.querySelector("#liveText");
-input.addEventListener('keydown', (e) => {
-    output.textContent = "Text" + `${e.key}`;
-});
+//input.addEventListener('keydown', (e) => {
+    //output.textContent = "Text" + `${e.key}`;
+//});
