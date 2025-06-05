@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        *{
+            border: 1px solid red;
+        }
         .main {
             display: flex;
             flex-direction: column;
@@ -15,6 +19,10 @@
         div.container {
             border: 1px solid grey;
             padding: 20px
+        }
+
+        .offline {
+            display: none;
         }
     </style>
 </head>
@@ -32,7 +40,8 @@
      <div class="container">
         <button id="plus">Press to Increase</button>
         <button id="minus">Press to Decrease</button>
-        <p id="number"></p>
+        <button id="reset">Reset</button>
+        <p class="offline" id="number"></p>
      </div> 
     </div>
     

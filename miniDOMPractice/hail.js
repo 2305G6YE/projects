@@ -28,6 +28,19 @@ clear.addEventListener('click', (e) => {
 const plus = document.querySelector("#plus");
 const minus = document.querySelector("#minus");
 const number = document.querySelector("#number");
+const reset = document.querySelector('#reset');
+number.textContent = 0;
 plus.addEventListener('click', function(e) {
-    number.textContent = number + 1;
-})
+    number.classList.remove('offline');
+    number.textContent = parseInt(number.textContent) + 1;
+});
+
+minus.addEventListener('click', e => {
+    number.classList.remove('offline');
+    number.textContent = parseInt(number.textContent) - 1;
+});
+
+reset.addEventListener('click', e => {
+   number.textContent = 0;
+   number.classList.add('offline'); 
+});
