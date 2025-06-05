@@ -6,8 +6,8 @@ This project was a overall summary and refresher on DOM Manipulation after watch
 
 
 ## Takeaways:
-New inputs learnt: `parseInt()` `Math.round`<br/s>
-Most used: `id``document.querySelector``variable.addEventListener`
+New inputs learnt: `parseInt()` `Math.round`  
+Most used: `id` `document.querySelector` `variable.addEventListener`
 
 Its helpful to implement a tiny bit of previously learnt topics here and there like flexbox and general css. I do not need to dive deep into revision, because while doing projects it seems to naturally need me to look up the relevant information and refresh along the way. I think I learnt not to worry too much about not remembering all the information I recently read in one go. More useful if I comprehend the information first.
 
