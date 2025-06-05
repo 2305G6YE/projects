@@ -12,6 +12,22 @@ color.addEventListener('click',(e) => {
 // 2nd Segment
 const output = document.querySelector("#output");
 const input = document.querySelector("#liveText");
-//input.addEventListener('keydown', (e) => {
-    //output.textContent = "Text" + `${e.key}`;
-//});
+input.addEventListener('keypress', (e) => {
+    output.textContent += `${e.key}`;
+    if(`${e.key.length}` > 1) {
+        return output.textContent = "";
+    }
+});
+const clear = document.querySelector("#clear");
+clear.addEventListener('click', (e) => {
+    input.value = "";
+    output.textContent = "";
+})
+
+// 3rd Segment
+const plus = document.querySelector("#plus");
+const minus = document.querySelector("#minus");
+const number = document.querySelector("#number");
+plus.addEventListener('click', function(e) {
+    number.textContent = number + 1;
+})
