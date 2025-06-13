@@ -3,11 +3,6 @@
     display: border-box;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
 .rowClass {
     flex: auto;
     min-height: 30px;
@@ -17,3 +12,4 @@
 .colClass {
     flex: auto;
 }
+
