@@ -1,0 +1,13 @@
+* {
+    border: grey solid 1px;
+    display: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.rowClass {
+    flex: auto;
+    min-height: 60px;
+}
