@@ -1,10 +1,15 @@
  const container = document.querySelector(".container");
 //Creates rows
-function makeRows(rowNum) {
+function makeGrid(rowNum,colNum) {
     for (let i = 0; i < rowNum; i++) {  
         const row = document.createElement("div");
-        row.className = "rowClass"
+        row.className = "rowClass";
         container.appendChild(row);
+        for (let c = 0; c < colNum; c++) {
+            const col = document.createElement("div");
+            col.className = "colClass";
+            row.appendChild(col);
+        }
     }
 }
-makeRows(16);
+makeGrid(16, 16);
