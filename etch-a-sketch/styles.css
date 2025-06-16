@@ -13,3 +13,6 @@
     flex: auto;
 }
 
+.colClass.transitionOn {
+    transition: background-color 1s ease;
+}

@@ -1,5 +1,5 @@
  
-const container = document.querySelector(".container");
+let container = document.querySelector(".container");
 //Creates rows
 function makeGrid(rowNum,colNum) {
     for (let i = 0; i < rowNum; i++) {  
@@ -15,10 +15,12 @@ function makeGrid(rowNum,colNum) {
 }
 
 makeGrid(16, 16);
+
 container.style.display = 'flex';
 container.style.flexDirection = 'column';
 
 //Hover Effect
+function hoverColor() { 
 const div = document.querySelectorAll(".colClass");
 const arrayedDiv = Array.from(div);
 
@@ -34,5 +36,45 @@ for (const arrayPart of arrayedDiv) {
 
     arrayPart.addEventListener("mouseleave", function (e) {
         arrayPart.style.backgroundColor = "white";
+        arrayPart.classList.toggle('transitionOn');
     });
 }
+};
+hoverColor();
+
+const button = document.querySelector("#resize");
+function promptVertical() {
+    const newRow = parseInt(prompt("Row Amount? (Vertical)(Max: 100)"));
+    if (newRow > 100 || newRow < 1)
+    {
+        return promptVertical();
+    }
+    console.log(newRow);
+    return newRow;
+};
+
+function promptHorizon () {
+     const newCol = parseInt(prompt("Column Amount? (Horizontal)(Max: 100)"));
+     if (newCol > newCol || newCol < 1)
+    {
+        return promptHorizon();
+    }
+    console.log(newCol);
+    return newCol;
+};
+
+function newContainer () {
+let newContainer = document.createElement("div");
+    newContainer.classList = "container";
+    document.body.appendChild(newContainer);
+    return newContainer;
+};
+
+button.addEventListener("click", function (e) {
+    let finalRow = promptVertical();
+    let finalCol = promptHorizon();
+    container.remove();
+    container = newContainer();
+    makeGrid(finalRow, finalCol);
+    hoverColor();
+})
