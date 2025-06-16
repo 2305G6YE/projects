@@ -19,12 +19,20 @@ container.style.display = 'flex';
 container.style.flexDirection = 'column';
 
 //Hover Effect
-const div = document.querySelectorAll("div.rowClass, div.colClass");
+const div = document.querySelectorAll(".colClass");
+const arrayedDiv = Array.from(div);
+
 function randomColor() {
-    Math.floor(Math.random() * 255);
+    return Math.floor(Math.random() * 255);
 };
 
-document.addEventListener("mousemove", function(e) {
-    div.style.backgroundColor = "rgb(" + `${randomColor()}` +
-    ", " + `${randomColor()}` + ", " + `${randomColor()}` + ")";
-})
+for (const arrayPart of arrayedDiv) {
+    arrayPart.addEventListener("mouseenter", function(e) {
+        arrayPart.style.backgroundColor = `rgb(${randomColor()}, 
+        ${randomColor()}, ${randomColor()})`;
+    });
+
+    arrayPart.addEventListener("mouseleave", function (e) {
+        arrayPart.style.backgroundColor = "white";
+    });
+}
