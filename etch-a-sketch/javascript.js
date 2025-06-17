@@ -27,16 +27,22 @@ const arrayedDiv = Array.from(div);
 function randomColor() {
     return Math.floor(Math.random() * 255);
 };
-
 for (const arrayPart of arrayedDiv) {
+    arrayPart.dataset.opacity = "0";
     arrayPart.addEventListener("mouseenter", function(e) {
         arrayPart.style.backgroundColor = `rgb(${randomColor()}, 
         ${randomColor()}, ${randomColor()})`;
+        arrayPart.classList.remove("transitionOn");
     });
-
     arrayPart.addEventListener("mouseleave", function (e) {
-        arrayPart.style.backgroundColor = "white";
-        arrayPart.classList.toggle('transitionOn');
+        let opacity = parseFloat(arrayPart.dataset.opacity);
+        if (opacity < 1) {
+            opacity += 0.1;
+            arrayPart.dataset.opacity = opacity.toFixed(2);
+        }
+        arrayPart.style.backgroundColor = `rgba(0,0,0,${opacity})`;
+        // arrayPart.style.backgroundColor = "white";
+        arrayPart.classList.add('transitionOn');
     });
 }
 };
@@ -49,7 +55,6 @@ function promptVertical() {
     {
         return promptVertical();
     }
-    console.log(newRow);
     return newRow;
 };
 
@@ -59,7 +64,6 @@ function promptHorizon () {
     {
         return promptHorizon();
     }
-    console.log(newCol);
     return newCol;
 };
 
