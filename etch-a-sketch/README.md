@@ -17,6 +17,12 @@ I am quite happy about this project. I think one thing that always fascinated me
 
 * Instead of a single colour, the hover trail now leaves a random rgb colour. 
 * The hover trail has a smooth fading transition
-* A gradual darkening effect on all tiles per mouse-over.
+* A gradual darkening effect on each tile per mouse-over making it eventually totally black.
+
+While I was very happy to begin using arrays finally in tandem with Javascript and Flexbox, it was as I expected one of my weaker points. In my haste to use the map feature I forgot that it was more so for filtering and outputting a new array, whereas what I wanted was to affect an array with a function without a new output necessarily.
+
+I think this is one of those projects I am actually okay with other people seeing. 
+
+
 
 
